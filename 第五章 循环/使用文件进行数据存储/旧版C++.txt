@@ -1,0 +1,4 @@
+C++11之前 open 函数不支持 string 对象，需要将string转为 NULL 结束的字符串
+于是便有以下代码：
+inputFile.open(fileName.c_str());
+fileName.c_str() 中，fileName 为文件名， c_str()为函数，将 fileName 转化为 NULL 结束的字符串

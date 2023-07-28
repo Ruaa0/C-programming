@@ -1,0 +1,15 @@
+两种方法：
+1.
+ifstream inputFile;
+inputFile.open("balabala.txt")
+if(inputFile){
+    balabala
+}
+else{
+    cout << "Error" << endl;
+}
+
+2.
+if(inputFile.fail()){
+    cout << "Error" << endl;
+}

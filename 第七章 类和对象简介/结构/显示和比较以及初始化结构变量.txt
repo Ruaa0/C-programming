@@ -1,0 +1,38 @@
+1.错误语句 cout << employee << endl;    //不能直接输出结构变量，而要将结构变量每个成员单独输出
+
+2.不能将整个结构进行比较，而要比较结构中成员
+eg. if (employee1 == employee2) //错误语句
+    if (employee1.hours == employee2.hours) //合法
+
+3.初始化结构变量
+若已声明如下结构：
+struct Date{
+    int day, month, year;
+};
+定义和初始化Date变量的方法如下：
+Date birthday = {23, 8, 1983};  //大括号中的值按顺序分配给其成员
+也可以仅初始化结构变量的部分成员，如：
+Date birthday = {23, 8};    //只有 day 和 month 被初始化，year 未初始化。注意：若某个成员未被初始化时，则后面的成员都需要保留未被初始化，不能跳过成员，比如：
+Date birthday = {23, , 1983};   //非法
+
+此外，不能在结构声明中初始化结构成员，如下：
+//非法声明
+struct Date{
+    int day = 23,
+    month = 8,
+    year = 1983;
+};
+
+若结构包含任何诸如字符串之类的对象，那么许多编译器上它都无法运行，这时候需要用到 构造函数 来初始化结构成员变量。
+例如：
+struct Employee{
+    string name;
+    int vacationDays;
+    daysUsed;
+
+    Employee (string n = "", int d = 0){    //构造函数
+        name = n;
+        vacationDays = 10;
+        daysUsed = d;
+    }
+}；

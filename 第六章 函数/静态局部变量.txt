@@ -1,0 +1,7 @@
+一般局部变量在函数结束后遍被销毁，若要记住该局部变量，需使用静态局部变量
+eg.
+void showStatic(){
+    static int num = 0;
+    cout << "This function has been called " << ++num << " times. " <<endl;
+}
+

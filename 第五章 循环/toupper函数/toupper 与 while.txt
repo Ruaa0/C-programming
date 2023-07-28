@@ -1,0 +1,6 @@
+
+while(again == 'Y' || again == 'Y');
+等价于
+while(toupper(again) == 'Y');
+
+另外，相似函数 tolower 有着大写字母转小写的作用，用法与 toupper 相同

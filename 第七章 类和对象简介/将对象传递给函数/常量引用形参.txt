@@ -1,0 +1,11 @@
+//将对象按值传递给函数时，需要复制所有对象成员副本，可能会延长程序执行时间
+//如果将对象引用传递给函数，虽然速度快，但可能改变对象内部数据
+//若既要保护对象内部数据，又想速度快，则应使用 常量引用
+//语句如下
+
+void showValues (const InventoryItem &)     //函数原型
+void showValues (const InventoryItem &item) //函数头
+
+//也可以在函数原型和函数头中列出关键字 const ，如下：
+
+double getPrice() const
