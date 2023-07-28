@@ -1,0 +1,4 @@
+//不希望改变数组时，使用const关键字
+typedef int arrayType [];   //为 int[] 取个别名 arrayType
+void showValues (const arrayType, int)  //函数原型
+void showValues (const arrayType nums, int size);   //函数头

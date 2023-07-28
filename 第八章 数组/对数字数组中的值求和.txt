@@ -1,0 +1,7 @@
+total = 0;
+//常规 for循环
+for (int count = 0; count < NUM_UNITS; count++)
+    total += units [count];
+//基于范围的for循环
+for (int val : units)
+    total += val;

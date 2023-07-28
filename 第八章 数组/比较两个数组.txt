@@ -1,0 +1,20 @@
+if (array A == array B)        //错误
+    statement;
+
+//正确语句如下：
+const int SIZE = 5;     //数组大小只接受常数
+int arrayA [SIZE] = {1, 2, 3, 4, 5};
+int arrayB [SIZE] = {1, 2, 3, 4, 5};
+bool arraysEqual = true;        //标志变量
+int count = 0;                  //数组下标
+
+while (arraysEqual && count < SIZE){       //当 标志变量 不为0且 count 小于 SIZE 时
+    if(arrayA [count] != arrayB [count])
+        arraysEqual = false;
+    count++;
+}
+if (arraysEqual)
+    cout << "The arrays are equal. \n";
+else
+    cout << "The arrays are not equal. \n";
+    

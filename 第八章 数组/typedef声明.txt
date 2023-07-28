@@ -1,0 +1,9 @@
+//typedef声明允许把别名与简单的或结构化数据类型相关联
+//形式如下：
+typedef <现有数据类型><别名>;
+例如：
+typedef int examScore;      //给 int 一个别称：examScore
+examScore score1, score2;
+
+typedef double score [100]; //为大小100的double数组创建一个别名：score
+score finalExam;
